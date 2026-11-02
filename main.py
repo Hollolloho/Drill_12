@@ -5,7 +5,6 @@ import game_world
 
 # Game object class here
 
-
 def handle_events():
     global running
 
@@ -23,11 +22,15 @@ def handle_events():
 def reset_world():
     global boy
     game_world.clear()
-    grass = Grass()
-    game_world.add_object(grass, 0)
+
+    grass1 = Grass()
+    game_world.add_object(grass1, 0)
+
+    grass2 = Grass()
+    game_world.add_object(grass2, 1)
 
     boy = Boy()
-    game_world.add_object(boy, 1)
+    game_world.add_object(boy, 2)
 
 
 def update_world():
