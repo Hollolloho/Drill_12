@@ -2,8 +2,7 @@ from math import pi
 from pathlib import Path
 
 from pico2d import get_canvas_width, get_time, load_image
-from sdl2 import (SDL_KEYDOWN, SDL_KEYUP, SDLK_LEFT, SDLK_RIGHT,
-                  SDLK_SPACE)
+from sdl2 import (SDL_KEYDOWN, SDL_KEYUP, SDLK_LEFT, SDLK_RIGHT, SDLK_SPACE)
 from transitions import Machine
 
 from ball import Ball

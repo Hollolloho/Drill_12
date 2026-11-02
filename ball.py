@@ -1,7 +1,5 @@
 from pathlib import Path
-
 from pico2d import get_canvas_width, load_image
-
 import game_world
 
 

@@ -1,6 +1,6 @@
 #게임월드 리스트 초기화
 
-world = [[], []] # 객체들의 리스트, 빈 리스트
+world = [[], [], []] # 객체들의 리스트, 빈 리스트
 
 # 객체를 게임월드에 추가하는 함수
 def add_object(o, depth=0):
@@ -25,7 +25,7 @@ def clear():
 
 def update():
     for layer in world:
-        for o in layer[:]:
+        for o in layer:
             o.update() # 객체들의 update() 호출
 
 #게임 월드 렌더링
@@ -37,10 +37,13 @@ def render():
 
 #객체를 게임월드에 추가
 
-def add_objects(objects, depth=0):
-    world[depth].extend(objects)
+def add_objects(objects, depth = 0):
+    world[depth] += objects
 
-def remove_objects(objects, depth):
-    for o in list(objects):
-        world[depth].remove(o)
+def remove_objects(o):
+    for layer in world:
+        if o in layer:
+            layer.remove(o)
+            return
+
 
