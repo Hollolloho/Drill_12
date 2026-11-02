@@ -17,13 +17,14 @@ def handle_events():
         else:
             boy.handle_event(event)
 
-
+# 캐릭터 아래에 박혀있어야해?
 
 def reset_world():
     global boy
     game_world.clear()
 
     grass1 = Grass()
+    grass1.y = 60
     game_world.add_object(grass1, 0)
 
     grass2 = Grass()
